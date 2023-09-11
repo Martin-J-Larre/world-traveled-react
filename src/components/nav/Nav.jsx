@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Nav.module.css";
-import Logo from "./Logo";
+import Logo from "../logo/Logo";
 export const Nav = () => {
   return (
     <nav className={styles.nav}>

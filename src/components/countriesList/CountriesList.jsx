@@ -1,9 +1,11 @@
 import styles from "./CountryList.module.css";
-import Message from "../Message";
+import Message from "../message/Message";
 import Spinner from "../spinner/Spinner";
 import CountryItem from "../countryItem/CountryItem";
+import { useCities } from "../../context/CitiesContext";
 
-const CountriesList = ({ data, loading }) => {
+const CountriesList = () => {
+  const { data, loading } = useCities();
   if (loading) return <Spinner />;
   if (!data.length)
     return (
@@ -17,10 +19,14 @@ const CountriesList = ({ data, loading }) => {
       return arr;
     }
   }, []);
+  console.log(countries);
   return (
     <ul className={styles.countryList}>
       {countries.map((country) => (
-        <CountryItem country={country} />
+        <CountryItem
+          country={country}
+          key={country.country + Math.trunc(Math.random() * 10000)}
+        />
       ))}
     </ul>
   );

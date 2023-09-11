@@ -1,5 +1,5 @@
 // Uses the same styles as Product
-import { Nav } from "../components/Nav";
+import { Nav } from "../components/nav/Nav";
 import styles from "./Product.module.css";
 
 export default function Product() {

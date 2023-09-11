@@ -1,4 +1,5 @@
 import styles from "./Button.module.css";
+import PropTypes from "prop-types";
 
 const Button = ({ onClick, children, type }) => {
   return (
@@ -9,3 +10,9 @@ const Button = ({ onClick, children, type }) => {
 };
 
 export default Button;
+
+Button.propTypes = {
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+  children: PropTypes.any,
+};

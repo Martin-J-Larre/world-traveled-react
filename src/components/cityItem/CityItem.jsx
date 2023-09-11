@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./CityItem.module.css";
 const formatDate = (date) =>
@@ -26,6 +27,14 @@ const CityItem = ({ city }) => {
       </Link>
     </li>
   );
+};
+
+CityItem.propTypes = {
+  id: PropTypes.number,
+  emoji: PropTypes.string,
+  cityName: PropTypes.string,
+  date: PropTypes.string,
+  position: PropTypes.object,
 };
 
 export default CityItem;
