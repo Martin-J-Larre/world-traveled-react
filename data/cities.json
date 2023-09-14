@@ -35,6 +35,126 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Helechosa de los Montes",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T03:39:09.318Z",
+      "notes": "This place is wonderfull",
+      "position": {
+        "lat": "39.26628442213066",
+        "lng": "-4.833984375000001"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Helechosa de los Montes",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T03:39:09.318Z",
+      "notes": "This place is wonderfull",
+      "position": {
+        "lat": "39.26628442213066",
+        "lng": "-4.833984375000001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Foggaret Ezzaou",
+      "country": "Algeria",
+      "emoji": "🇩🇿",
+      "date": "2023-09-14T03:44:07.836Z",
+      "notes": "",
+      "position": {
+        "lat": "27.644606381943326",
+        "lng": "3.2080078125000004"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Foggaret Ezzaou",
+      "country": "Algeria",
+      "emoji": "🇩🇿",
+      "date": "2023-09-14T03:44:07.836Z",
+      "notes": "",
+      "position": {
+        "lat": "27.644606381943326",
+        "lng": "3.2080078125000004"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Moia",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T03:50:43.524Z",
+      "notes": "",
+      "position": {
+        "lat": "41.80407814427237",
+        "lng": "2.0434570312500004"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Jumelles",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-14T03:53:34.383Z",
+      "notes": "",
+      "position": {
+        "lat": "48.915008614300284",
+        "lng": "1.215704531249986"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Gracay",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-14T03:54:01.053Z",
+      "notes": "",
+      "position": {
+        "lat": "47.15984001304432",
+        "lng": "1.8237304687500002"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Saint-Agnant-pres-Crocq",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-14T03:54:16.036Z",
+      "notes": "",
+      "position": {
+        "lat": "45.81348649679973",
+        "lng": "2.3291015625000004"
+      },
+      "id": 98443205
+    },
+    {
+      "cityName": "Ambialet",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-14T03:54:43.473Z",
+      "notes": "",
+      "position": {
+        "lat": "43.91372326852401",
+        "lng": "2.3730468750000004"
+      },
+      "id": 98443206
+    },
+    {
+      "cityName": "Azaila",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T03:55:47.550Z",
+      "notes": "",
+      "position": {
+        "lat": "41.261291493919884",
+        "lng": "-0.46142578125000006"
+      },
+      "id": 98443207
     }
   ]
 }
