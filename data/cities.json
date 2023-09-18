@@ -35,6 +35,54 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Carlepont",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2023-09-18T02:04:22.322Z",
+      "notes": "",
+      "position": {
+        "lat": "49.4965404934121",
+        "lng": "3.007754296874996"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Ishinomaki",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2023-09-18T02:04:44.664Z",
+      "notes": "",
+      "position": {
+        "lat": "38.466492845389446",
+        "lng": "141.32812500000003"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-18T02:16:01.892Z",
+      "notes": "",
+      "position": {
+        "lat": "39.98501230042296",
+        "lng": "-0.04119873046875001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Castello de la Plana",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-18T02:16:07.189Z",
+      "notes": "",
+      "position": {
+        "lat": "39.98132938627215",
+        "lng": "-0.03776550292968751"
+      },
+      "id": 98443201
     }
   ]
 }
