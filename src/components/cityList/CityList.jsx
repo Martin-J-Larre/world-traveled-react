@@ -5,15 +5,15 @@ import Message from "../message/Message";
 import { useCities } from "../../context/CitiesContext";
 
 const CityList = () => {
-  const { data, loading } = useCities();
+  const { cities, loading } = useCities();
   if (loading) return <Spinner />;
-  if (!data.length)
+  if (!cities.length)
     return (
       <Message message="Add your first city by clicking on a city on the map" />
     );
   return (
     <ul className={styles.cityList}>
-      {data.map((city) => (
+      {cities.map((city) => (
         <CityItem city={city} key={city.id} />
       ))}
     </ul>

@@ -1,23 +1,63 @@
-import { useState, useEffect, createContext, useContext } from "react";
+import {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  useReducer,
+} from "react";
 
 const CitiesContext = createContext();
 
+const initialSate = {
+  cities: [],
+  loading: false,
+  currentCity: {},
+  error: "",
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "loading":
+      return { ...state, loading: action.payload };
+    case "cities/loaded":
+      return { ...state, cities: action.payload };
+    case "city/loaded":
+      return { ...state, currentCity: action.payload };
+    case "city/created":
+      return { ...state, cities: [...state.cities, action.payload] };
+    case "city/deleted":
+      return {
+        ...state,
+        cities: state.cities.filter((city) => city.id !== action.payload),
+      };
+    case "rejected":
+      return { ...state, loading: false, eror: action.payload };
+
+    default:
+      throw new Error("Something is wrong in the reducer");
+  }
+}
+
 const CitiesProvider = ({ children }) => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [currentCity, setCurrentCity] = useState({});
+  const [{ cities, loading, currentCity }, dispatch] = useReducer(
+    reducer,
+    initialSate
+  );
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setLoading(true);
+        dispatch({ type: "loading", payload: true });
         const resp = await fetch("http://localhost:8000/cities");
         const data = await resp.json();
-        setData(data);
+        dispatch({ type: "cities/loaded", payload: data });
       } catch (error) {
-        console.log(error);
+        dispatch({
+          type: "rejected",
+          payload: " There was am error loading data...",
+        });
       } finally {
-        setLoading(false);
+        dispatch({ type: "loading", payload: false });
       }
     };
     fetchData();
@@ -25,20 +65,23 @@ const CitiesProvider = ({ children }) => {
 
   const getCity = async (id) => {
     try {
-      setLoading(true);
+      dispatch({ type: "loading", payload: true });
       const resp = await fetch(`http://localhost:8000/cities/${id}`);
       const data = await resp.json();
-      setCurrentCity(data);
+      dispatch({ type: "city/loaded", payload: data });
     } catch (error) {
-      console.log(error);
+      dispatch({
+        type: "rejected",
+        payload: " There was am error loading data...",
+      });
     } finally {
-      setLoading(false);
+      dispatch({ type: "loading", payload: false });
     }
   };
 
   const createCity = async (newCity) => {
     try {
-      setLoading(true);
+      dispatch({ type: "loading", payload: true });
       const resp = await fetch(`http://localhost:8000/cities`, {
         method: "POST",
         body: JSON.stringify(newCity),
@@ -47,32 +90,35 @@ const CitiesProvider = ({ children }) => {
         },
       });
       const city = await resp.json();
-      setData((d) => [...d, city]);
+      dispatch({ type: "city/created", payload: city });
     } catch (error) {
-      console.log(error);
+      dispatch({
+        type: "rejected",
+        payload: " There was am error deleting city...",
+      });
     } finally {
-      setLoading(false);
+      dispatch({ type: "loading", payload: false });
     }
   };
 
   const deleteCity = async (id) => {
     try {
-      setLoading(true);
+      dispatch({ type: "loading", payload: true });
       await fetch(`http://localhost:8000/cities/${id}`, {
         method: "DELETE",
       });
 
-      setData((data) => data.filter((city) => city.id !== id));
+      dispatch({ type: "city/deleted", payload: id });
     } catch (error) {
       console.log(error);
     } finally {
-      setLoading(false);
+      dispatch({ type: "loading", payload: false });
     }
   };
 
   return (
     <CitiesContext.Provider
-      value={{ data, loading, currentCity, getCity, createCity, deleteCity }}
+      value={{ cities, loading, currentCity, getCity, createCity, deleteCity }}
     >
       {children}
     </CitiesContext.Provider>

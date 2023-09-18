@@ -35,66 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
-    },
-    {
-      "cityName": "Helechosa de los Montes",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-09-14T03:39:09.318Z",
-      "notes": "This place is wonderfull",
-      "position": {
-        "lat": "39.26628442213066",
-        "lng": "-4.833984375000001"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Helechosa de los Montes",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-09-14T03:39:09.318Z",
-      "notes": "This place is wonderfull",
-      "position": {
-        "lat": "39.26628442213066",
-        "lng": "-4.833984375000001"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Foggaret Ezzaou",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2023-09-14T03:44:07.836Z",
-      "notes": "",
-      "position": {
-        "lat": "27.644606381943326",
-        "lng": "3.2080078125000004"
-      },
-      "id": 98443200
-    },
-    {
-      "cityName": "Foggaret Ezzaou",
-      "country": "Algeria",
-      "emoji": "🇩🇿",
-      "date": "2023-09-14T03:44:07.836Z",
-      "notes": "",
-      "position": {
-        "lat": "27.644606381943326",
-        "lng": "3.2080078125000004"
-      },
-      "id": 98443201
-    },
-    {
-      "cityName": "Moia",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2023-09-14T03:50:43.524Z",
-      "notes": "",
-      "position": {
-        "lat": "41.80407814427237",
-        "lng": "2.0434570312500004"
-      },
-      "id": 98443202
     }
   ]
 }
